@@ -5,7 +5,6 @@ var       passport = require('passport')
          , request = require('request')
    , LocalStrategy = require('passport-local').Strategy
   , OAuth2Strategy = require('passport-oauth').OAuth2Strategy
-   , MyUSAStrategy = require('passport-myusa').Strategy
 , LinkedInStrategy = require('passport-linkedin').Strategy
   , BearerStrategy = require('passport-http-bearer').Strategy;
 
@@ -116,35 +115,6 @@ passport.use('oauth2', new OAuth2Strategy({
         done
       );
     })
-  }
-));
-
-// Use the MyUSAStrategy within Passport.
-//   Strategies in Passport require a `verify` function, which accept
-//   credentials (in this case, an accessToken, refreshToken, and MyUSA
-//   profile), and invoke a callback with a user object.
-passport.use('myusa', new MyUSAStrategy({
-    passReqToCallback: true,
-    clientID: authSettings.auth.myusa.clientId,
-    clientSecret: authSettings.auth.myusa.clientSecret,
-    callbackURL: authSettings.auth.myusa.callbackUrl,
-    // Initially use alpha.my.usa.gov until app approved for production
-    authorizationURL: 'https://alpha.my.usa.gov/oauth/authorize',
-    tokenURL: 'https://alpha.my.usa.gov/oauth/token',
-    profileURL: 'https://alpha.my.usa.gov/api/profile'
-  },
-  function (req, accessToken, refreshToken, profile, done) {
-    if (sails.config.auth.auth.myusa.overwrite === true) {
-      profile.overwrite = true;
-    }
-    userUtils.createOauthUser(
-      'myusa',
-      req,
-      { accessToken: accessToken,
-        refreshToken: refreshToken },
-      profile,
-      done
-    );
   }
 ));
 

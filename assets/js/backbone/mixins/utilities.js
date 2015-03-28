@@ -234,12 +234,13 @@ global.validate = function (e) {
 
 global.validatePassword = function (username, password) {
   var rules = {
-    username: false,
-    length: false,
-    upper: false,
-    lower: false,
-    number: false,
-    symbol: false
+    // Anything goes for development
+    username: true,
+    length: true,
+    upper: true,
+    lower: true,
+    number: true,
+    symbol: true
   };
   var _username = username.toLowerCase().trim();
   var _password = password.toLowerCase().trim();

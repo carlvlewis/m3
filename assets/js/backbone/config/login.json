@@ -1,8 +1,7 @@
 {
   "signin": true,
   "oauth": [
-    "linkedin",
-    "myusa"
+    "linkedin"
   ],
   "config": {
     "linkedin": {
@@ -10,12 +9,6 @@
       "image": "/images/login/linkedin.png",
       "endpoint": "/api/auth/oauth/linkedin",
       "params": {"scope": ["r_basicprofile", "r_fullprofile", "r_emailaddress", "r_network"]}
-    },
-    "myusa": {
-      "name": "MyUSA",
-      "image": "/images/login/myusa.png",
-      "endpoint": "/api/auth/oauth/myusa",
-      "params": { "scope": ["profile.email", "profile.first_name", "profile.last_name"] }
     }
   },
   "local": {

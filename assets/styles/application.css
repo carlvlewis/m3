@@ -1563,7 +1563,8 @@ ul.task-tags > li {
 }
 
 #container.home #splash1 {
-  background-image: url('/images/home/hp-rotunda-looking-down.jpg');
+  background-image: url('/images/home/Parliament-Ottawa.jpg');
+  background-position: 0;
   background-repeat: no-repeat;
   background-size: cover;
 
