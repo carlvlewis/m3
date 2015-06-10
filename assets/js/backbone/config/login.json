@@ -8,7 +8,7 @@
       "name": "LinkedIn",
       "image": "/images/login/linkedin.png",
       "endpoint": "/api/auth/oauth/linkedin",
-      "params": {"scope": ["r_basicprofile", "r_fullprofile", "r_emailaddress", "r_network"]}
+      "params": {"scope": ["r_basicprofile", "r_emailaddress"]}
     }
   },
   "local": {
