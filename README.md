@@ -40,3 +40,5 @@ the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/pub
 
 For more information, see [license](https://github.com/18F/midas/blob/devel/LICENSE.md).
 
+* * *
+
